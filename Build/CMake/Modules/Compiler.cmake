@@ -245,6 +245,8 @@ ELSE()
 			SET(${flag_var} "-s")
 		ENDFOREACH()
 	ENDIF()
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fvisibility=hidden")
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fvisibility=hidden -fvisibility-inlines-hidden")
 ENDIF()
 
 SET(CMAKE_C_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_DEBUG})
